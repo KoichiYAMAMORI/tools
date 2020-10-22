@@ -9,8 +9,8 @@ import pandas as pd
 import os
 
 
-INPUT=input()
-output=input()
+input='C:/Users/kouit/Desktop/result20201019.txt'
+
 
 
 lst=[]
@@ -48,6 +48,6 @@ for n in range(len(length)):
 q_posi=q_posi[:-1]    
     
 df=pd.DataFrame({'name':q_name,'primer_length':length,'Hit':hit,'Hit_chr':result_chr,'sbjct':SBJCT} )
-df.to_csv(output,index=False)    
+df.to_csv('C:/Users/kouit/Desktop/20201019_myb4_primer.csv',index=False)    
         
     
