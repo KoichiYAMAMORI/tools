@@ -9,7 +9,7 @@ import pandas as pd
 import os
 
 
-input=input()
+INPUT=input()
 output=input()
 
 
