@@ -15,12 +15,12 @@ for v in range(5):
         #0=b,1=f
         if s==0:
             dataset=val.iloc[0:5]
-            #BOOTING {正常: 'gold', 剥離:'darkgreen' , 肥大: 'red', 未分化: 'deepskyblue', 崩壊:'darkviolet' , その他: 'darkgray'}
+            #BOOTING 
             colors = ['gold', 'darkgreen', 'red', 'deepskyblue','darkviolet' ]
 
         else:
             dataset=val.iloc[5:]
-            #FLOURING {正常: gold, tiny: teal, tdr: firebrick,  未分化: 'deepskyblue', 崩壊:'darkviolet' , その他: 'w'}
+            #FLOURING 
             colors= ['gold','firebrick','deepskyblue','darkviolet' ]
 
         fig, ax = plt.subplots(figsize=(10, 8))

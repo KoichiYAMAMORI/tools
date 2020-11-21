@@ -18,14 +18,14 @@ for v in val:
         for c in range (2):
             data=Datas.iloc[:,c].values.tolist()[::-1]
             if s==0:
-                #BOOTING {正常: 'gold', 剥離:'darkgreen' , 肥大: 'red', 未分化: 'deepskyblue', 崩壊:'darkviolet' , その他: 'darkgray'}
+                #booting
                 colors = ['gold', 'darkgreen', 'red', 'deepskyblue','darkviolet' , 'darkgray']
                 fig = plt.figure()
                 plt.pie(data, colors=colors[::-1], startangle=450)
                 fig.savefig('C:/Users/kouit/Desktop/円グラフ/booting/'+v+'_'+condition[c]+'_b.png',bbox_inches='tight')
                 
             else:
-                #FLOURING {正常: gold, tiny: yellowgreen, tdr: firebrick,  未分化: 'deepskyblue', 崩壊:'darkviolet' , その他: 'w'}
+                #FLOURING 
                 colors= ['gold','coral','firebrick','deepskyblue','darkviolet' , 'darkgray']
                 fig = plt.figure()
                 plt.pie(data, colors=colors[::-1], startangle=450)

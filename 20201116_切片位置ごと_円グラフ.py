@@ -19,11 +19,11 @@ for v in range(2):
     for s in range(2):
         if s==0:
             df_s=df_v.iloc[0:5]
-            #BOOTING {正常: 'gold', 剥離:'darkgreen' , 肥大: 'red', 未分化: 'deepskyblue', 崩壊:'darkviolet' , その他: 'darkgray'}
+            #BOOTING
             colors = ['gold', 'darkgreen', 'red', 'deepskyblue','darkviolet' ]
         else:
             df_s=df_v.iloc[5:9]
-            #FLOURING {正常: gold, tiny: teal, tdr: firebrick,  未分化: 'deepskyblue', 崩壊:'darkviolet' , その他: 'w'}
+            #FLOURING 
             colors= ['gold','firebrick','deepskyblue','darkviolet' ]
             
         for c in range(2):
