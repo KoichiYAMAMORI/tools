@@ -49,14 +49,11 @@ for dire in Dire:
     #ヒストグラム
     plt.xticks(np.arange(lst_min, lst_max+2, 2.0))
     plt.xlim(lst_min-2,lst_max+2)
-    #Binsを数列にするとずれない###############################
+    
     plt.hist(lst,color='c',bins=Bins,ec='black')
     plt.gca().spines['right'].set_visible(False)
     plt.gca().spines['top'].set_visible(False)
-    #if (lst_max-lst_min)%2==0:
-        #plt.xticks(np.arange(lst_min, lst_max+1, 2.0))
-   # else:
-        #plt.xticks(np.arange(lst_min, lst_max+2, 2.0))
+  
         
     plt.xlabel('Tiller number',fontsize=16)
     plt.ylabel('Number of plants',fontsize=16)
@@ -81,5 +78,7 @@ for dire in Dire:
     
     #ここでyaxisを数列で定義###################################################
     #plt.yticks(np.linspace(0, ylim+1,ylim//10))
-    plt.ylim(0,ylim)
+    
+    plt.yticks([i*10 for i in range (1+(ylim//10))])
+    ax.set_ylim(bottom=0, top=ylim)
     fig.savefig(dire.split('.')[0]+'.png')
