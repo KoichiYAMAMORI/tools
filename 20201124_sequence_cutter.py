@@ -36,9 +36,8 @@ for file in Files:
             
             
             seq_head=ref.iloc[r_block].values.tolist()[0][(r_num-1):].strip('\n')
-            #block=0を定義しないとspyderがエラーを吐く
-            block=0
-            for block in range(r_block,f_block-1):
+
+            for block in range(f_block,r_block-1):
                 seq_head=seq_head+ref.iloc[block].values.tolist()[0].strip('\n')
                 
             seq_head=seq_head+ref.iloc[block+1].values.tolist()[0][:f_num].strip('\n')
