@@ -17,7 +17,7 @@ chro=['chr01','chr02','chr03','chr04','chr05','chr06','chr07','chr08', 'chr09','
 #chro=['chr01']
 
 for file in Files:
-    gene_df=pd.read_csv('C:/Users/Koichi YAMAMORI/Desktop/OsMyb4_target/selected_gene/'+file,index_col='geneID')
+    gene_df=pd.read_csv('bin/'+file,index_col='geneID')
     
     for c in chro:
         ch=gene_df.loc[gene_df['chr']==c]
