@@ -36,9 +36,12 @@ for file in Files:
             
             
             seq_head=ref.iloc[r_block].values.tolist()[0][(r_num-1):].strip('\n')
-            for h in range(r_block,f_block-1):
-                seq_head=seq_head+ref.iloc[h].values.tolist()[0].strip('\n')
-            seq_head=seq_head+ref.iloc[h+1].values.tolist()[0][:f_num].strip('\n')
+            #block=0を定義しないとspyderがエラーを吐く
+            block=0
+            for block in range(r_block,f_block-1):
+                seq_head=seq_head+ref.iloc[block].values.tolist()[0].strip('\n')
+                
+            seq_head=seq_head+ref.iloc[block+1].values.tolist()[0][:f_num].strip('\n')
             seq.append(seq_head)
         ch['seq']=seq
         ch.to_csv('results/'+file+'_'+c+'.csv')

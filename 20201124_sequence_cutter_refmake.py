@@ -9,7 +9,7 @@ Created on Thu May 28 09:47:28 2020
 import pandas as pd
 
 chro=['>chr00','>chr01','>chr02','>chr03','>chr04','>chr05','>chr06','>chr07','>chr08', '>chr09','>chr10','>chr11','>chr12']
-input='REF/IRGSP-1.0_genome.fasta'
+input='REF/IRGSP-1.0_genome.fa'
 
 lst=[i for i in range(721184)]
 df=pd.DataFrame(lst)
