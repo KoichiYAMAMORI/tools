@@ -42,10 +42,11 @@ for file in Files:
         sbjct=[]
         for q in range(len(query)):
             if '>' in query[q]:
-                chr_lst.append(query[q])
+                Chr=query[q]
             if 'Sbjct' in query[q]:
                 if float(len(query[q].split()[2])) >= float(length[n].split('\n')[0])*0.8:  
                     sbjct.append(query[q])
+                    chr_lst.append(Chr)
         SBJCT.append(sbjct) 
         hit.append(len(sbjct))
         result_chr.append(chr_lst)
